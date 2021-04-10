@@ -35,9 +35,11 @@ def time(p, q, r) -> float:
         / turn(p, q, r)
 
 
-# input: a list of points in 3d
-# output: indices of facets of lower hull
 def hull(s: np.array):
+    '''
+    input: a list of points in 3d
+    output: indices of facets of lower hull
+    '''
     # attach original indices
     ind = np.arange(len(s)).reshape(len(s), 1)
     points = np.hstack((s, ind))
